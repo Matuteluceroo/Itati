@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import backgroundImage from '../../assets/images/montanaspatagonia.jpg';
-import "./Regions.css";
-import { Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './Regions.css';
 
+const Header = ({ language, setLanguage }) => (
+  <header className="header-bar">
+    <div className="language-toggle">
+      <button className={language === 'es' ? 'active' : ''} onClick={() => setLanguage('es')}>Español</button>
+      <button className={language === 'en' ? 'active' : ''} onClick={() => setLanguage('en')}>English</button>
+      <button className={language === 'both' ? 'active' : ''} onClick={() => setLanguage('both')}>Ambos</button>
+    </div>
+  </header>
+);
 const regions = [
   {
     id: 1,
@@ -40,8 +49,6 @@ const regions = [
     en: "Patagonian cuisine is born from fire, sea and forest. Lamb, trout, berries and wild herbs make up a menu that breathes nature."
   }
 ];
-
-
 const RegionCard = ({ region, language }) => (
   <div className="region-card">
     <h2 className="region-title">{region.name}</h2>
@@ -57,15 +64,14 @@ const RegionCard = ({ region, language }) => (
       )}
     </div>
     <div className="text-center mt-4">
-      <a href={`/comida/${region.id}`} className="btn-discover">
+      <Link to={`/comida/${region.id}`} className="btn-discover">
         Conocer comida típica
-      </a>
+      </Link>
     </div>
   </div>
 );
 
-
-export default function App() {
+export default function Regions() {
   const [language, setLanguage] = useState('es');
 
   return (
@@ -73,28 +79,9 @@ export default function App() {
       className="app-container"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="content-wrapper">
-        <div className="language-buttons">
-          <button
-            className={language === 'es' ? 'active' : ''}
-            onClick={() => setLanguage('es')}
-          >
-            Español
-          </button>
-          <button
-            className={language === 'en' ? 'active' : ''}
-            onClick={() => setLanguage('en')}
-          >
-            English
-          </button>
-          <button
-            className={language === 'both' ? 'active' : ''}
-            onClick={() => setLanguage('both')}
-          >
-            Ambos
-          </button>
-        </div>
+      <Header language={language} setLanguage={setLanguage} />
 
+      <div className="content-wrapper">
         <div className="space-y-10 pb-16">
           {regions.map(region => (
             <RegionCard key={region.id} region={region} language={language} />

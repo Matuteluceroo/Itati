@@ -90,6 +90,10 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
+.space-y-10.pb-16 {
+  margin-top: 80px; /* o lo que mida tu header */
+}
+
 
 .btn-discover:hover {
   background-color: #2563eb;

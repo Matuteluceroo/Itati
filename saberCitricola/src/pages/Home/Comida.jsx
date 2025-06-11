@@ -1,11 +1,26 @@
 import React from 'react';
 import './Comida.css';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import noa from '../../assets/images/nea.png'
+import nea from '../../assets/images/noa.jpg'
+import centro from '../../assets/images/centro.jpeg'
+import cuyo from '../../assets/images/cuyo.jpg'
+import patagonia from '../../assets/images/patagonia.jpg'
 
+const Header = ({ language, setLanguage }) => (
+  <header className="header-bar">
+    <div className="language-toggle">
+      <button className={language === 'es' ? 'active' : ''} onClick={() => setLanguage('es')}>Español</button>
+      <button className={language === 'en' ? 'active' : ''} onClick={() => setLanguage('en')}>English</button>
+      <button className={language === 'both' ? 'active' : ''} onClick={() => setLanguage('both')}>Ambos</button>
+    </div>
+    <Link to="/" className="back-home">Volver al inicio</Link>
+  </header>
+);
 const comidaData = {
   1: {
     region: 'Región Noroeste (NOA)',
-    backgroundUrl: 'URL_FONDO_NOA',
+    backgroundUrl: noa,
     slogan: {
       es: 'Donde el maíz se convierte en historia',
       en: 'Where corn becomes culture'
@@ -33,7 +48,7 @@ const comidaData = {
   },
   2: {
     region: 'Región Noreste (NEA)',
-    backgroundUrl: 'URL_FONDO_NEA',
+    backgroundUrl: nea,
     slogan: {
       es: 'Sabor guaraní, corazón del litoral',
       en: 'Guaraní flavors from the river’s heart'
@@ -61,7 +76,7 @@ const comidaData = {
   },
   3: {
     region: 'Región Cuyo',
-    backgroundUrl: 'URL_FONDO_CUYO',
+    backgroundUrl: cuyo,
     slogan: {
       es: 'El sabor que acompaña al vino',
       en: 'The flavor that walks with wine'
@@ -89,7 +104,7 @@ const comidaData = {
   },
   4: {
     region: 'Región Centro',
-    backgroundUrl: 'URL_FONDO_CENTRO',
+    backgroundUrl: centro,
     slogan: {
       es: 'Tradición que se amasa',
       en: 'Tradition you can knead'
@@ -117,7 +132,7 @@ const comidaData = {
   },
   5: {
     region: 'Región Patagónica',
-    backgroundUrl: 'URL_FONDO_PATAGONIA',
+    backgroundUrl: patagonia,
     slogan: {
       es: 'El sur también se come',
       en: 'The South is meant to be tasted'
@@ -148,6 +163,7 @@ const comidaData = {
 export default function Comida() {
   const { id } = useParams();
   const regionInfo = comidaData[id];
+  const [language, setLanguage] = React.useState('es');
 
   if (!regionInfo) return <div className="error">Región no encontrada</div>;
 
@@ -156,6 +172,8 @@ export default function Comida() {
       className="comida-page"
       style={{ backgroundImage: `url(${regionInfo.backgroundUrl})` }}
     >
+      <Header language={language} setLanguage={setLanguage} />
+
       <div className="comida-content">
         <h1>{regionInfo.region}</h1>
         <p className="slogan">{regionInfo.slogan.es} / {regionInfo.slogan.en}</p>
@@ -165,8 +183,8 @@ export default function Comida() {
             <img src={plato.imagen} alt={plato.nombre} className="plato-img" />
             <div>
               <h2>{plato.nombre}</h2>
-              <p>{plato.descripcion}</p>
-              <p><em>{plato.descripcionEn}</em></p>
+              {(language === 'es' || language === 'both') && <p>{plato.descripcion}</p>}
+              {(language === 'en' || language === 'both') && <p><em>{plato.descripcionEn}</em></p>}
             </div>
           </div>
         ))}

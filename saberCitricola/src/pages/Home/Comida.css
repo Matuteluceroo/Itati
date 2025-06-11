@@ -74,3 +74,64 @@ body {
   font-size: 1rem;
   line-height: 1.5;
 }
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.language-toggle {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.language-toggle button {
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  background: white;
+  border: 1px solid #1d4ed8;
+  color: #1d4ed8;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.language-toggle button.active {
+  background: #1d4ed8;
+  color: white;
+}
+
+.language-toggle button:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.back-home {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1d4ed8;
+  border: 1px solid #1d4ed8;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.back-home:hover {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+/* espacio superior para que el contenido no quede debajo del header fijo */
+.comida-content {
+  margin-top: 100px;
+}
+
