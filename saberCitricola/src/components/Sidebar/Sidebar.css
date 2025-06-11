@@ -1,0 +1,122 @@
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color: #F5FAF0;
+    padding: 20px 10px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    color: black;
+    z-index: 1000;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    color: black;
+    background-color: #F5FAF0;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.toggle-button:hover {
+    background-color: #61a53a;
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-profile-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+}
+
+.sidebar-profile-image.small {
+    height: 40px;
+    width: 40px;
+    margin-right: 0;
+}
+
+.sidebar-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.sidebar-profile-role {
+    font-size: 14px;
+    color: #5b5c5c;
+    margin: 0;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    margin: 15px 0;
+}
+
+.sidebar-item.active .sidebar-link {
+    background-color: #61a53a;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #61a53a;
+}
+
+
+.sidebar-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    transition: margin-right 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-icon {
+    margin-right: 0;
+}
+
+.sidebar.collapsed .sidebar-item span {
+    display: none;
+}

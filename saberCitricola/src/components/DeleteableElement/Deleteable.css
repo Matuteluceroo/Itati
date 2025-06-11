@@ -1,0 +1,15 @@
+.elementoFiltro {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+  }
+  
+  .txtFiltro {
+    flex-grow: 1;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+ 

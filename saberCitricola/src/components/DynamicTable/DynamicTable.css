@@ -1,0 +1,196 @@
+.scroll-container {
+    height: 100%;
+    width: 100%;
+    padding: 0 !important;
+    /* flex-grow: 1; */
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.dinamicTable {
+    table-layout: auto; /* Permite que las columnas se ajusten al contenido */
+    /* width: 100%; */
+    border-collapse: collapse;
+}
+
+
+.dinamicTable td {
+    white-space: normal; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: auto; 
+    max-width: none; 
+}
+
+.tableRow {
+    cursor: pointer;
+}
+.tableRow:hover {
+    >td {
+        background-color: var(--azul-macropharma) !important;
+        color: white;
+    }
+
+    >td>.inpCell {
+        background-color: var(--azul-macropharma);
+        color: white;
+    }
+}
+
+.tableRow>td {
+    min-height: 40px;
+    margin: 0;
+    background-color: var(--background-tabla);
+    border: 1px solid black !important;
+    vertical-align: top;
+    align-items: center; /* Añadir align-items: center */
+    justify-content: center; /* Opcional: Centrar horizontalmente si es necesario */
+
+        height: auto !important;
+        min-height: 40px;
+        white-space: normal;
+    
+    
+}
+
+/* Opcional: Ajustar estilos del botón */
+.tableRow>td>.btnImg {
+    margin: 0;
+    padding: 0;
+}
+
+/* Opcional: Ajustar estilos del contenedor del botón */
+.tableRow>td>div {
+    margin: 0;
+    padding: 0;
+}
+.noEditableCell {
+    background-color: #d4d4d4 !important;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.inpCell {
+    max-height: 150px; /* Ajusta este valor según tus necesidades */
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+    padding: 2px 6px;
+    text-align: left;
+    background-color: var(--background-tabla);
+    border: 0;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+  }
+
+.inpCell:focus {
+    outline: none;
+}
+
+.tblHead {
+    user-select: none;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--verde-oscuro);
+    color: var(--color-text);
+    border: 1px solid var(--border);
+    overflow-wrap: break-word; 
+}
+
+.filterContent{
+    padding: 0 15px;
+    height: 80px;
+}
+.modal-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 300px;
+}
+
+.modal-list {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-list-item {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.modal-filters-title {
+    font-size: 14px;
+    color: #666;
+    margin-top: 16px;
+}
+
+.modal-filter-input-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    margin-top: 8px;
+}
+
+.modal-filter-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.modal-filter-button {
+    margin-left: 8px;
+    background-color: transparent; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: solid 2px;
+    border-radius: 30px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-filter-content {
+    margin-top: 16px;
+}
+
+.modal-scroll-container {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.modal-no-filters {
+    font-size: 12px;
+    color: #999;
+}
+
+.modal-deleteable {
+    padding: 6px 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-deleteable-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    padding: 4px;
+}

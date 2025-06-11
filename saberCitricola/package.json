@@ -1,0 +1,55 @@
+{
+  "name": "ktc-3",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.8",
+    "classnames": "^2.5.1",
+    "cra-template": "1.2.0",
+    "date-fns": "^4.1.0",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-calendar-heatmap": "^1.10.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.2",
+    "socket.io-client": "^4.8.1",
+    "tailwindcss": "^3.4.6",
+    "ui": "github:shadcn/ui",
+    "web-vitals": "^4.2.4",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview --host 0.0.0.0 --port 4173"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "vite": "^6.0.6"
+  }
+}

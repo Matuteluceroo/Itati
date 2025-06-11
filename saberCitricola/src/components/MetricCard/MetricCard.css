@@ -1,0 +1,70 @@
+.metric-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    width: 240px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6B7280;
+}
+
+.change-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.change-indicator.positive {
+    background-color: #ECFDF5;
+    color: #10B981;
+}
+
+.change-indicator.negative {
+    background-color: #FEF2F2;
+    color: #EF4444;
+}
+
+.arrow {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-footer {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+}
+
+.trend-text {
+    display: inline-block;
+    border-top: 1px solid #F3F4F6;
+    padding-top: 8px;
+}

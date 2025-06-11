@@ -1,0 +1,77 @@
+/* src/components/Header.css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F5FAF0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+    /* Sombra para separar del contenido */
+    z-index: 1000;
+    /* Para que siempre esté encima */
+}
+
+.header-left {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+}
+
+.header-title {
+    font-size: 18px;
+
+    color: black;
+    /* SABER CITRICOLA */
+
+    width: auto;
+    height:max-content;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height, or 128% */
+
+    color: #121F0A;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: center;
+    flex-grow: 0;
+
+}
+
+.header-right {
+    display: flex;
+    gap: 10px;
+    margin-right: 28px;
+}
+
+.header-button {
+    background-color: transparent;
+    /* Verde para resaltar */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.header-button:hover {
+    background-color: #61a53a;
+    /* Un verde más oscuro al pasar el mouse */
+}

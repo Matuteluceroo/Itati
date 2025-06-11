@@ -1,0 +1,20 @@
+/* Contenedor principal que envuelve Sidebar y contenido */
+.home-container {
+    display: flex;
+    height: 100vh; /* Asegura que ocupa toda la altura de la pantalla */
+}
+
+/* El contenido principal (paginas) */
+.content-container {
+    flex: 1; /* Ocupa todo el espacio restante al lado del Sidebar */
+    margin-left: 250px; /* Margen que coincide con el ancho del Sidebar */
+    padding: 20px; /* Espaciado interno para el contenido */
+    box-sizing: border-box;
+    overflow-y: auto; /* Habilita el scroll si el contenido es muy grande */
+    color: black;
+}
+
+/* Ajustes para cuando el Sidebar esté colapsado */
+.sidebar.collapsed ~ .content-container {
+    margin-left: 70px; /* Ajusta el margen al ancho colapsado del Sidebar */
+}
