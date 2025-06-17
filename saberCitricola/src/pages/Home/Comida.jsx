@@ -44,7 +44,7 @@ const comidaData = {
     platos: [
       {
         nombre: 'Empanadas salteñas',
-        descripcion: 'Masa fina, rellenas de carne cortada a cuchillo, papa, huevo y especias. Se hornean y se sirven calientes, con limón.',
+        descripcion: 'Masa fina, rellenas de carne cortada a cuchillo, papa, huevo y especias. Se hornean y se sirven calientes.',
         descripcionEn: 'Thin dough pastries filled with diced beef, potato, boiled egg, and spices. Oven-baked and served warm, often with a splash of lemon.',
         imagen: empanadas
       },
